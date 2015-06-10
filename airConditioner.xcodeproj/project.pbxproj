@@ -13,6 +13,10 @@
 		A1CB5B3E1B287EAE00107A88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1CB5B3D1B287EAE00107A88 /* Images.xcassets */; };
 		A1CB5B411B287EAE00107A88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CB5B3F1B287EAE00107A88 /* LaunchScreen.xib */; };
 		A1CB5B4D1B287EAE00107A88 /* airConditionerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB5B4C1B287EAE00107A88 /* airConditionerTests.swift */; };
+		A1CB5B5A1B287F1700107A88 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB5B571B287F1700107A88 /* ysocket.swift */; };
+		A1CB5B5B1B287F1700107A88 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = A1CB5B581B287F1700107A88 /* ytcpsocket.c */; };
+		A1CB5B5C1B287F1700107A88 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB5B591B287F1700107A88 /* ytcpsocket.swift */; };
+		A1CB5B5E1B28808900107A88 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB5B5D1B28808900107A88 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,11 @@
 		A1CB5B461B287EAE00107A88 /* airConditionerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = airConditionerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CB5B4B1B287EAE00107A88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1CB5B4C1B287EAE00107A88 /* airConditionerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airConditionerTests.swift; sourceTree = "<group>"; };
+		A1CB5B561B287F1600107A88 /* airConditioner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "airConditioner-Bridging-Header.h"; sourceTree = "<group>"; };
+		A1CB5B571B287F1700107A88 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		A1CB5B581B287F1700107A88 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		A1CB5B591B287F1700107A88 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		A1CB5B5D1B28808900107A88 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +88,15 @@
 			children = (
 				A1CB5B361B287EAE00107A88 /* AppDelegate.swift */,
 				A1CB5B381B287EAE00107A88 /* ViewController.swift */,
+				A1CB5B571B287F1700107A88 /* ysocket.swift */,
+				A1CB5B581B287F1700107A88 /* ytcpsocket.c */,
+				A1CB5B5D1B28808900107A88 /* Common.swift */,
+				A1CB5B591B287F1700107A88 /* ytcpsocket.swift */,
 				A1CB5B3A1B287EAE00107A88 /* Main.storyboard */,
 				A1CB5B3D1B287EAE00107A88 /* Images.xcassets */,
 				A1CB5B3F1B287EAE00107A88 /* LaunchScreen.xib */,
 				A1CB5B341B287EAE00107A88 /* Supporting Files */,
+				A1CB5B561B287F1600107A88 /* airConditioner-Bridging-Header.h */,
 			);
 			path = airConditioner;
 			sourceTree = "<group>";
@@ -212,8 +226,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1CB5B5A1B287F1700107A88 /* ysocket.swift in Sources */,
 				A1CB5B391B287EAE00107A88 /* ViewController.swift in Sources */,
+				A1CB5B5B1B287F1700107A88 /* ytcpsocket.c in Sources */,
 				A1CB5B371B287EAE00107A88 /* AppDelegate.swift in Sources */,
+				A1CB5B5E1B28808900107A88 /* Common.swift in Sources */,
+				A1CB5B5C1B287F1700107A88 /* ytcpsocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +360,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = airConditioner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "airConditioner/airConditioner-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +374,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = airConditioner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "airConditioner/airConditioner-Bridging-Header.h";
 			};
 			name = Release;
 		};
