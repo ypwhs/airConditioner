@@ -13,7 +13,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        connect()
+        if let data = NSUserDefaults(suiteName: "data")
+        {
+            ip.text = data.stringForKey("ip")
+        }
         Common.xiancheng({
             while(true){
                 NSThread.sleepForTimeInterval(0.5)
@@ -26,9 +29,15 @@ class ViewController: UIViewController {
     }
     
     func connect(){
+
         Common.xiancheng({
             Common.client = TCPClient(addr: self.ip.text, port: 8899)
-            Common.connect()
+            if Common.connect(){
+                if let data = NSUserDefaults(suiteName: "data")
+                {
+                    data.setObject(self.ip.text, forKey: "ip")
+                }
+            }
         })
     }
     

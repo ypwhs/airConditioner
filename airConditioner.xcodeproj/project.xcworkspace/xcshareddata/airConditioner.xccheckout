@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D7967E94-8A1D-475F-A98E-3E0CCF6D491E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>airConditioner</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>266DC12398221E8EF69A13B4975565C799E9EE34</key>
+		<string>https://github.com/ypwhs/airConditioner.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>airConditioner.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>266DC12398221E8EF69A13B4975565C799E9EE34</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ypwhs/airConditioner.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>266DC12398221E8EF69A13B4975565C799E9EE34</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>266DC12398221E8EF69A13B4975565C799E9EE34</string>
+			<key>IDESourceControlWCCName</key>
+			<string>airConditioner</string>
+		</dict>
+	</array>
+</dict>
+</plist>
